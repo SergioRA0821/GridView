@@ -31,8 +31,32 @@ namespace GridView
                 MessageBox.Show("Eliminado con éxito");
             }
             else
+
             {
                 MessageBox.Show("Fallo al eliminar");
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (acc.AgregarAuto(Convert.ToInt32(txbMatricula2.Text), txbColor.Text, Convert.ToInt32(txbAño.Text), txbMarca.Text, txbPais.Text))
+            {
+                MessageBox.Show("Agregado con éxito");
+            }
+            else
+
+            {
+                MessageBox.Show("Fallo al agregar");
             }
         }
     }

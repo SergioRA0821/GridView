@@ -20,6 +20,7 @@ namespace GridView
         {
             return ListaAutos;
         }
+        Modelo a = new Modelo();
         public bool EliminarAuto(int matricula)
         {
             try
@@ -31,6 +32,19 @@ namespace GridView
                     return true;
                 }
                 return false;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
+        public bool AgregarAuto(int matricula, string color, int año, string marca, string pais)
+        {
+            try
+            {
+                ListaAutos.Add(new Modelo(a.Matricula = matricula, a.Color = color, a.Año = año, a.Marca = marca, a.Pais = pais));
+                    return true;
             }
             catch (Exception)
             {
