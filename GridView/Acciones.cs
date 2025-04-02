@@ -20,5 +20,23 @@ namespace GridView
         {
             return ListaAutos;
         }
+        public bool EliminarAuto(int matricula)
+        {
+            try
+            {
+                var objeteliminar = ListaAutos.Find(x => x.Matricula == matricula);
+                if (objeteliminar != null)
+                {
+                    ListaAutos.Remove(objeteliminar);
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
     }
 }

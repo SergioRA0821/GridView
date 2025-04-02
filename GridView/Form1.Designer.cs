@@ -30,6 +30,9 @@
         {
             this.dgDatos = new System.Windows.Forms.DataGridView();
             this.btnMostrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.txbMatricula = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,17 +54,47 @@
             this.btnMostrar.UseVisualStyleBackColor = true;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(80, 340);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Matricula";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(65, 390);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // txbMatricula
+            // 
+            this.txbMatricula.Location = new System.Drawing.Point(56, 364);
+            this.txbMatricula.Name = "txbMatricula";
+            this.txbMatricula.Size = new System.Drawing.Size(100, 20);
+            this.txbMatricula.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txbMatricula);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.dgDatos);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgDatos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -69,6 +102,9 @@
 
         private System.Windows.Forms.DataGridView dgDatos;
         private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.TextBox txbMatricula;
     }
 }
 
