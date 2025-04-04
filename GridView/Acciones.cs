@@ -52,5 +52,22 @@ namespace GridView
                 return false;
             }
         }
+        public bool ActualizarAuto(int matricula, string color, int año, string marca, string pais)
+        {
+            try
+            {
+                var ObjetoEliminar = ListaAutos.Find(x => x.Matricula == matricula);
+                ObjetoEliminar.Matricula = matricula;
+                ObjetoEliminar.Color = color;
+                ObjetoEliminar.Año = año;
+                ObjetoEliminar.Marca = marca;
+                ObjetoEliminar.Pais = pais;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

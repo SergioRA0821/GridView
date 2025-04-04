@@ -59,5 +59,29 @@ namespace GridView
                 MessageBox.Show("Fallo al agregar");
             }
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if (acc.ActualizarAuto(Convert.ToInt32(txbMatricula2.Text), txbColor.Text, Convert.ToInt32(txbAño.Text), txbMarca.Text, txbPais.Text))
+            {
+                MessageBox.Show("Actualizado con éxito");
+            }
+            else
+
+            {
+                MessageBox.Show("Fallo al actualizar");
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txbMatricula.Text = "";
+            txbMatricula2.Text = "";
+            txbColor.Text = "";
+            txbAño.Text = "";
+            txbMarca.Text = "";
+            txbPais.Text = "";
+
+        }
     }
 }
